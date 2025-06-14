@@ -9,6 +9,11 @@
   - Создан агент с возможностью поиска через DuckDuckGo
   - Агент может отвечать на вопросы, используя актуальную информацию из интернета
   - Реализовано корректное закрытие соединения с API
+- [x] Шаг 3: Работа с файловой системой
+  - Создан агент с возможностью управления файлами
+  - Реализована работа с Python REPL
+  - Агент может создавать и редактировать файлы
+  - Поддерживается выполнение Python кода
 
 ## Следующие шаги
 
@@ -26,6 +31,9 @@ GigaAgent/
 │   ├── giga_step002.py     # Основной скрипт
 │   ├── config.py           # Конфигурация
 │   └── giga_step002_test.py # Тесты
+├── Step3_create_python_hello_world_with_agent/ # Работа с файлами
+│   ├── giga_step003.py     # Основной скрипт
+│   └── config.py           # Конфигурация
 ├── requirements.txt        # Зависимости
 └── .gitignore             # Игнорируемые файлы
 ```
@@ -71,6 +79,11 @@ python Step1_testGigachat/giga_step001.py
 ### Шаг 2: Поиск с DuckDuckGo
 ```bash
 python Step2_use_search_tool/giga_step002.py
+```
+
+### Шаг 3: Работа с файловой системой
+```bash
+python Step3_create_python_hello_world_with_agent/giga_step003.py
 ```
 
 ## Разработка
