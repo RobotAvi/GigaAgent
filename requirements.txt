@@ -1,2 +1,10 @@
-requests>=2.31.0
-python-dotenv>=1.0.0 
+requests==2.31.0
+python-dotenv==1.0.0
+langchain-gigachat==0.0.1
+langchain-community==0.0.13
+langgraph==0.0.15
+pytest==7.4.3
+pytest-cov==4.1.0
+black==23.11.0
+isort==5.12.0
+mypy==1.7.1 

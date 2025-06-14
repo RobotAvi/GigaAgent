@@ -1,32 +1,92 @@
-# GigaChat AI Agent Testing
+# GigaAgent AI Agents
 
-Проект для тестирования ИИ агентов на базе GigaChat API.
+Проект для работы с GigaChat API через различные инструменты и агентов.
 
 ## Текущий статус
 
 - [x] Шаг 1: Проверка соединения с GigaChat API
+- [x] Шаг 2: Интеграция с поисковым инструментом DuckDuckGo
+  - Создан агент с возможностью поиска через DuckDuckGo
+  - Агент может отвечать на вопросы, используя актуальную информацию из интернета
+  - Реализовано корректное закрытие соединения с API
 
 ## Следующие шаги
 
 - [ ] Будут определены позже
 
+## Структура проекта
+
+```
+GigaAgent/
+├── Step1_testGigachat/     # Базовый тест GigaChat
+│   ├── giga_step001.py     # Основной скрипт
+│   ├── config.py           # Конфигурация
+│   └── giga_step001_test.py # Тесты
+├── Step2_use_search_tool/  # Поиск с DuckDuckGo
+│   ├── giga_step002.py     # Основной скрипт
+│   ├── config.py           # Конфигурация
+│   └── giga_step002_test.py # Тесты
+├── requirements.txt        # Зависимости
+└── .gitignore             # Игнорируемые файлы
+```
+
 ## Установка
 
-1. Установите зависимости:
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/yourusername/GigaAgent.git
+cd GigaAgent
+```
+
+2. Создайте виртуальное окружение:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
+
+3. Установите зависимости:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Настройка:
-- Добавьте ваши учетные данные GigaChat в `config.py`
+4. Создайте файл конфигурации:
+```bash
+cp Step1_testGigachat/config.template.py Step1_testGigachat/config.py
+cp Step2_use_search_tool/config.template.py Step2_use_search_tool/config.py
+```
 
-## Структура проекта
-
-- `Step1_testGigachat/` - Тестирование подключения к GigaChat API
+5. Отредактируйте файлы конфигурации и добавьте ваш API ключ GigaChat:
+```python
+GIGACHAT_CREDENTIALS = "your_api_key_here"
+```
 
 ## Использование
 
-Запустите тест подключения:
+### Шаг 1: Базовый тест GigaChat
 ```bash
-python Step1_testGigachat/test_connection.py
+python Step1_testGigachat/giga_step001.py
 ```
+
+### Шаг 2: Поиск с DuckDuckGo
+```bash
+python Step2_use_search_tool/giga_step002.py
+```
+
+## Разработка
+
+### Запуск тестов
+```bash
+pytest Step1_testGigachat/giga_step001_test.py
+pytest Step2_use_search_tool/giga_step002_test.py
+```
+
+### Добавление нового шага
+1. Создайте новую директорию в корне проекта
+2. Скопируйте структуру из существующих шагов
+3. Добавьте тесты
+4. Обновите README.md
+
+## Лицензия
+
+MIT

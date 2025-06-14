@@ -1,5 +1,5 @@
 import unittest
-from giga_test001 import llm
+from giga_step001 import llm
 
 class TestGigaChat(unittest.TestCase):
     def test_basic_response(self):
