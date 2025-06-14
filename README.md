@@ -28,4 +28,5 @@ pip install -r requirements.txt
 
 Запустите тест подключения:
 ```bash
-python Step1_testGigachat/test_connection.py 
+python Step1_testGigachat/test_connection.py
+```
