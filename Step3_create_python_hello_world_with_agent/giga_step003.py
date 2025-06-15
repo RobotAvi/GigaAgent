@@ -11,7 +11,7 @@ llm = GigaChat(
     # Для авторизации запросов используйте ключ, полученный в проекте GigaChat API
     credentials=GIGACHAT_CREDENTIALS,
     verify_ssl_certs=False,
-    model= ("GigaChat-2-Max"),
+    model= ("GigaChat-2"),
     top_p=0
 )
 
@@ -40,7 +40,8 @@ agent = create_react_agent(
     tools=tools,
     prompt="""Ты ассистент для работы с файловой системой. При получении команды:
     1. Сначала напиши "План действий:" и перечисли шаги
-    2. Если нужно создать или исправить Python скрипт:
+    2. Добавь tools в шаги
+    3. Если нужно создать или исправить Python скрипт:
        - Создай/отредактируй файл с помощью file tool
        - Прочитай содержимое файла
        - Проверь что код корректен и выведет 'Hello World'

@@ -62,6 +62,7 @@ pip install -r requirements.txt
 ```bash
 cp Step1_testGigachat/config.template.py Step1_testGigachat/config.py
 cp Step2_use_search_tool/config.template.py Step2_use_search_tool/config.py
+cp Step3_create_python_hello_world_with_agent/config.template.py Step3_create_python_hello_world_with_agent/config.py
 ```
 
 5. Отредактируйте файлы конфигурации и добавьте ваш API ключ GigaChat:
@@ -92,6 +93,7 @@ python Step3_create_python_hello_world_with_agent/giga_step003.py
 ```bash
 pytest Step1_testGigachat/giga_step001_test.py
 pytest Step2_use_search_tool/giga_step002_test.py
+pytest Step3_create_python_hello_world_with_agent/giga_step003_test.py
 ```
 
 ### Добавление нового шага
@@ -103,3 +105,10 @@ pytest Step2_use_search_tool/giga_step002_test.py
 ## Лицензия
 
 MIT
+
+### Зависимости
+- langchain-gigachat: для работы с GigaChat API
+- langchain-community: для инструментов поиска и работы с файлами
+- langchain-experimental: для Python REPL
+- langgraph: для создания агентов
+- duckduckgo-search: для поиска в интернете
